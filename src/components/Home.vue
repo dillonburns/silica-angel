@@ -4,8 +4,7 @@
     <div class="message">
       little winds blowing backwards into u over u out of u
     </div>
-    <div class="click"
-         @click="togglePlaying">
+    <div class="click">
       thankful
     </div>
     <div class="contact">
@@ -13,9 +12,12 @@
         contact@silicaangel.rip
       </a>
     </div>
+    <!--
     <audio ref="audio"
+           loop
            :src="snippetSrc"
            class="audio"/>
+    -->
   </div>
 </template>
 
@@ -49,15 +51,17 @@ export default {
 </script>
 
 <style scoped lang="scss">
-$color: black;
+$color: #929292;
+$fake-italic: skew(-10deg, 0);
 
 .content {
   color: $color;
   text-align: center;
+  font-style: italic;
 
   img {
     width: 400px;
-    max-width: 80%;
+    max-width: 55%;
     height: auto;
     margin: auto;
     margin-bottom: 36px;
@@ -65,16 +69,19 @@ $color: black;
 
   .message {
     font-size: 2.75vmax;
+    transform: $fake-italic;
   }
 
   .click {
     font-size: 3.2vmax;
-    margin: 32px auto;
+    margin: 16px auto;
+    transform: $fake-italic;
   }
 
   .contact {
     font-size: 2vmax;
-    margin: 32px auto;
+    margin: 16px auto;
+    transform: $fake-italic;
 
     a {
       color: inherit;
