@@ -75,11 +75,21 @@ $fake-italic: skew(-10deg, 0);
     &:not(.message) {
       margin: 16px auto;
 
-      &:hover {
-        span{
+      span{
+        position: relative;
+        &:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 2px;
+        }
+        &:hover {
           width: auto;
           cursor: pointer;
-          text-decoration: underline dotted;
+          &:after {
+            border-bottom: 2px dotted $color;
+          }
         }
       }
     }
@@ -95,6 +105,12 @@ $fake-italic: skew(-10deg, 0);
 
   .contact {
     font-size: 2vmax;
+
+    span {
+      &:after {
+        bottom: -1px !important;
+      }
+    }
 
     a {
       color: inherit;
