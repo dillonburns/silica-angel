@@ -148,6 +148,7 @@ $spacing: 16px auto;
     font-size: 2vmax;
     margin: $spacing;
     opacity: 0;
+    pointer-events: none;
     transition: all 200ms;
 
     span {
@@ -168,6 +169,7 @@ $spacing: 16px auto;
     }
 
     &.visible {
+      pointer-events: all;
       opacity: 1;
     }
   }
