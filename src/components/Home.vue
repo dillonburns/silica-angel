@@ -35,7 +35,7 @@
       <span>little winds blowing backwards into u over u out of u</span>
     </div>
     <div class="click">
-      <span @click="toggleSnippetPlaying"><a>thankful</a></span>
+      <a><span @click="toggleSnippetPlaying">thankful</span></a>
     </div>
     <div class="contact">
       <a href="mailto:contact@silicaangel.rip">
@@ -138,6 +138,10 @@ $spacing: 16px auto;
 
   .click {
     font-size: 3.2vmax;
+
+    span, a {
+      cursor: pointer;
+    }
   }
 
   .links {
@@ -182,6 +186,7 @@ $spacing: 16px auto;
 a {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 
   &:hover {
     color: inherit;
